@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Compiled Narrative — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <header class="header-mobile" aria-label="Mobile navigation">
+      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle menu">≡</button>
+    </header>
+
+    <nav class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="sidebar-nav">
+        <a href="#readme" class="nav-item active">readme</a>
+        <a href="#entries" class="nav-item">/entries</a>
+        <a href="#projects" class="nav-item">/projects</a>
+        <a href="#contact" class="nav-item">/contact</a>
+      </div>
+    </nav>
+
+    <main class="content-main">
+      <div class="gutter" aria-hidden="true">
+        <span class="gutter-line">01</span>
+        <span class="gutter-line">02</span>
+        <span class="gutter-line">03</span>
+        <span class="gutter-line">04</span>
+        <span class="gutter-line">05</span>
+        <span class="gutter-line">06</span>
+        <span class="gutter-line">07</span>
+        <span class="gutter-line">08</span>
+        <span class="gutter-line">09</span>
+        <span class="gutter-line">10</span>
+      </div>
+
+      <div class="content-inner">
+        <article id="readme">
+          <section class="hero">
+            <h1 class="greeting">Hi, I'm [Name].</h1>
+            <p class="role">Full Stack Developer</p>
+            <blockquote class="tldr">
+              <strong>TL;DR</strong> — This site is a coding journal: projects, learnings, and career milestones. Built with semantic HTML, CSS variables, and a syntax-inspired design system for recruiters and admissions officers.
+            </blockquote>
+          </section>
+
+          <h2 id="entries">/entries</h2>
+          <p>Recent journal entries (file cards). Each card links to a full article.</p>
+
+          <a href="#entry-1" class="file-card">
+            <h3 class="card-title">introduction-to-the-stack.md</h3>
+            <p class="card-meta">const date = '2024-05-12';</p>
+            <p class="card-summary">How I chose React, Node, and Postgres for a side project and what I'd do differently. Includes performance notes and deployment on Vercel.</p>
+            <div class="card-tags">
+              <span class="badge">React</span>
+              <span class="badge">Node</span>
+              <span class="badge badge--success">Pass</span>
+            </div>
+          </a>
+
+          <a href="#entry-2" class="file-card">
+            <h3 class="card-title">design-systems-in-practice.md</h3>
+            <p class="card-meta">const date = '2024-04-28';</p>
+            <p class="card-summary">Defining a token-based design system for a SaaS dashboard. Covers color, spacing, and component API decisions with <code>CSS custom properties</code>.</p>
+            <div class="card-tags">
+              <span class="badge">CSS</span>
+              <span class="badge">Design tokens</span>
+            </div>
+          </a>
+
+          <a href="#entry-3" class="file-card">
+            <h3 class="card-title">api-design-and-openapi.md</h3>
+            <p class="card-meta">const date = '2024-04-10';</p>
+            <p class="card-summary">REST vs minimal RPC-style endpoints. Documenting with OpenAPI and generating client SDKs for TypeScript and Python.</p>
+            <div class="card-tags">
+              <span class="badge">API</span>
+              <span class="badge">OpenAPI</span>
+              <span class="badge badge--success">Pass</span>
+            </div>
+          </a>
+
+          <h2 id="contact">/contact</h2>
+          <p>Reach out via email. You can copy the address with one click.</p>
+          <div class="pre-wrap">
+            <pre><code id="emailCode" data-email="hello@example.com">const contact = "hello@example.com";</code></pre>
+            <button type="button" class="btn btn--secondary copy-btn" data-copy-target="emailCode" aria-label="Copy email">Copy</button>
+          </div>
+
+          <p style="margin-top: 1rem;">
+            <button type="button" class="btn btn--primary">Primary action</button>
+            <button type="button" class="btn btn--secondary">Secondary</button>
+          </p>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
